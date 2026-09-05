@@ -14,7 +14,7 @@ function Header() {
         <Logo className="text-2xl sm:text-3xl" />
 
         {/* Desktop Navigation Links */}
-        <div className="hidden lg:flex items-center space-x-7 font-heading font-semibold text-xs xl:text-sm text-ink-muted">
+        <div className="hidden lg:flex items-center space-x-5 xl:space-x-7 font-heading font-semibold text-xs xl:text-sm text-ink-muted">
           <a
             href="/#features"
             className="hover:text-rose transition-colors py-1"
@@ -53,8 +53,8 @@ function Header() {
           </Link>
         </div>
 
-        {/* Right Desktop Actions */}
-        <div className="hidden sm:flex items-center space-x-3 sm:space-x-4">
+        {/* Right Desktop Actions (lg+) */}
+        <div className="hidden lg:flex items-center space-x-3 sm:space-x-4">
           <Link
             to="/login"
             className="text-xs sm:text-sm font-heading font-bold text-ink-muted hover:text-rose transition-colors px-3.5 py-2 rounded-xl hover:bg-stone-50"
@@ -69,11 +69,11 @@ function Header() {
           </Link>
         </div>
 
-        {/* Mobile Actions: Compact CTA + Hamburger Button */}
-        <div className="flex sm:hidden items-center space-x-2">
+        {/* Mobile & Tablet Actions: Compact CTA + Hamburger Button (<lg) */}
+        <div className="flex lg:hidden items-center space-x-2">
           <Link
             to="/stage"
-            className="bg-rose hover:bg-rose-dark text-white px-3.5 py-1.5 rounded-xl font-heading font-bold text-xs transition-all shadow-soft active:scale-95 whitespace-nowrap cursor-pointer"
+            className="bg-rose hover:bg-rose-dark text-white px-3 sm:px-4 py-1.5 rounded-xl font-heading font-bold text-xs transition-all shadow-soft active:scale-95 whitespace-nowrap cursor-pointer"
           >
             Begin
           </Link>
@@ -99,9 +99,9 @@ function Header() {
         </div>
       </nav>
 
-      {/* Mobile Drawer Dropdown */}
+      {/* Mobile & Tablet Drawer Dropdown (<lg) */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-white/98 backdrop-blur-lg border-b border-stone-100 px-6 py-5 shadow-warm">
+        <div className="lg:hidden bg-white/98 backdrop-blur-lg border-b border-stone-100 px-4 sm:px-6 py-5 shadow-warm animate-fade-in">
           <div className="flex flex-col space-y-4 font-heading font-semibold text-sm text-ink-muted">
             <a
               href="/#features"

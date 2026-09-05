@@ -100,23 +100,23 @@ export const ContractionTimerModal = ({ isOpen, onClose }) => {
       : 0;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-ink/40 backdrop-blur-sm animate-fade-in">
-      <div className="bg-canvas border border-ink/10 rounded-sheet w-full max-w-lg p-6 sm:p-8 shadow-warm relative max-h-[90vh] overflow-y-auto">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-ink/40 backdrop-blur-sm animate-fade-in">
+      <div className="bg-canvas border border-ink/10 rounded-card sm:rounded-sheet w-full max-w-lg p-5 sm:p-8 shadow-warm relative max-h-[92vh] overflow-y-auto">
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-6 right-6 w-8 h-8 rounded-full bg-ink/5 hover:bg-ink/10 text-ink flex items-center justify-center font-bold text-lg cursor-pointer transition-colors"
+          className="absolute top-5 right-5 sm:top-6 sm:right-6 w-8 h-8 rounded-full bg-ink/5 hover:bg-ink/10 text-ink flex items-center justify-center font-bold text-lg cursor-pointer transition-colors"
           aria-label="Close modal"
         >
           ×
         </button>
 
         {/* Modal Header */}
-        <div className="mb-6">
+        <div className="mb-5 sm:mb-6 pr-8">
           <span className="text-xs font-heading font-bold uppercase tracking-wider text-periwinkle-dark block mb-1">
             Maternal Rhythm & Labor Telemetry
           </span>
-          <h2 className="font-heading font-extrabold text-2xl text-ink">
+          <h2 className="font-heading font-extrabold text-xl sm:text-2xl text-ink">
             Contraction Rhythm Timer
           </h2>
           <p className="font-body text-xs text-ink-muted mt-1 leading-relaxed">
@@ -126,7 +126,7 @@ export const ContractionTimerModal = ({ isOpen, onClose }) => {
 
         {/* 5-1-1 Alert Banner */}
         {meets511 && (
-          <div className="mb-6 p-4 rounded-2xl bg-rose-light/70 border-2 border-rose text-ink">
+          <div className="mb-6 p-3.5 sm:p-4 rounded-2xl bg-rose-light/70 border-2 border-rose text-ink">
             <div className="flex items-center gap-2 mb-1">
               <span className="w-2.5 h-2.5 rounded-full bg-rose-dark animate-ping" />
               <strong className="font-heading font-extrabold text-sm text-ink">
@@ -140,12 +140,12 @@ export const ContractionTimerModal = ({ isOpen, onClose }) => {
         )}
 
         {/* Live Timer Card */}
-        <div className="bg-canvas/80 border border-ink/10 rounded-2xl p-6 text-center shadow-soft mb-6">
+        <div className="bg-canvas/80 border border-ink/10 rounded-2xl p-4 sm:p-6 text-center shadow-soft mb-6">
           <span className="text-xs font-body text-ink-muted block uppercase tracking-wider">
             {isActive ? 'Contraction In Progress' : 'Ready to Time Next Surge'}
           </span>
 
-          <div className="my-3 font-heading font-extrabold text-5xl text-ink tracking-tight">
+          <div className="my-2 sm:my-3 font-heading font-extrabold text-4xl sm:text-5xl text-ink tracking-tight">
             {formatTimer(seconds)}
           </div>
 

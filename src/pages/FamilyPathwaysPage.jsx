@@ -29,42 +29,42 @@ export default function FamilyPathwaysPage() {
     <div className="min-h-screen bg-white text-ink flex flex-col font-body selection:bg-rose-light">
       <Header />
 
-      <main className="flex-1 max-w-6xl mx-auto px-6 py-12 w-full">
+      <main className="flex-1 max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12 w-full">
         {/* Page Hero Header */}
-        <section className="text-center max-w-3xl mx-auto mb-14">
-          <span className="text-xs font-heading font-bold uppercase tracking-wider text-rose-dark block mb-3">
+        <section className="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
+          <span className="text-xs font-heading font-bold uppercase tracking-wider text-rose-dark block mb-2 sm:mb-3">
             The Three Life Stages
           </span>
-          <h1 className="text-4xl sm:text-5xl font-heading font-extrabold text-ink mb-5 leading-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-heading font-extrabold text-ink mb-4 sm:mb-5 leading-tight">
             Family Pathways & <span className="text-rose">Nurture Journeys</span>
           </h1>
-          <p className="text-lg text-ink-muted leading-relaxed font-body">
+          <p className="text-sm sm:text-base md:text-lg text-ink-muted leading-relaxed font-body">
             Grounded guidance for trying to conceive, gestational development, active labor timing, 
             and fourth-trimester healing, designed for mothers and their partners.
           </p>
         </section>
 
         {/* Quick Anchor Navigation Strip */}
-        <nav className="mb-14 p-2 bg-stone-50 rounded-card border border-stone-200/80 flex flex-wrap justify-center gap-2 text-xs font-heading font-bold">
-          <a href="#cycle" className="px-4 py-2 rounded-xl bg-white hover:bg-rose-light/40 text-ink shadow-soft transition-all">
+        <nav className="mb-10 sm:mb-14 p-2 bg-stone-50 rounded-card border border-stone-200/80 flex flex-wrap justify-center gap-1.5 sm:gap-2 text-xs font-heading font-bold">
+          <a href="#cycle" className="px-3.5 sm:px-4 py-1.5 sm:py-2 rounded-xl bg-white hover:bg-rose-light/40 text-ink shadow-soft transition-all">
             Cycle & Fertility
           </a>
-          <a href="#milestones" className="px-4 py-2 rounded-xl bg-white hover:bg-rose-light/40 text-ink shadow-soft transition-all">
+          <a href="#milestones" className="px-3.5 sm:px-4 py-1.5 sm:py-2 rounded-xl bg-white hover:bg-rose-light/40 text-ink shadow-soft transition-all">
             Fetal Milestones
           </a>
-          <a href="#labor-timing" className="px-4 py-2 rounded-xl bg-white hover:bg-rose-light/40 text-ink shadow-soft transition-all">
+          <a href="#labor-timing" className="px-3.5 sm:px-4 py-1.5 sm:py-2 rounded-xl bg-white hover:bg-rose-light/40 text-ink shadow-soft transition-all">
             5-1-1 Labor Timing
           </a>
-          <a href="#postpartum" className="px-4 py-2 rounded-xl bg-white hover:bg-rose-light/40 text-ink shadow-soft transition-all">
+          <a href="#postpartum" className="px-3.5 sm:px-4 py-1.5 sm:py-2 rounded-xl bg-white hover:bg-rose-light/40 text-ink shadow-soft transition-all">
             Postpartum Healing
           </a>
-          <a href="#partner-telemetry" className="px-4 py-2 rounded-xl bg-white hover:bg-rose-light/40 text-ink shadow-soft transition-all">
+          <a href="#partner-telemetry" className="px-3.5 sm:px-4 py-1.5 sm:py-2 rounded-xl bg-white hover:bg-rose-light/40 text-ink shadow-soft transition-all">
             CareCircle Telemetry
           </a>
         </nav>
 
         {/* Section 1: Cycle & Fertility Insights */}
-        <section id="cycle" className="scroll-mt-28 mb-16 bg-periwinkle-light/25 border border-periwinkle-light/60 rounded-card p-8 sm:p-10 shadow-soft">
+        <section id="cycle" className="scroll-mt-28 mb-12 sm:mb-16 bg-periwinkle-light/25 border border-periwinkle-light/60 rounded-card p-5 sm:p-8 lg:p-10 shadow-soft">
           <div className="flex flex-col lg:flex-row gap-8 items-center justify-between">
             <div className="lg:w-2/3">
               <div className="flex items-center gap-3 mb-3">
@@ -114,7 +114,7 @@ export default function FamilyPathwaysPage() {
         </section>
 
         {/* Section 2: Weekly Fetal Milestones */}
-        <section id="milestones" className="scroll-mt-28 mb-16 bg-white border border-stone-200 rounded-card p-8 sm:p-10 shadow-soft">
+        <section id="milestones" className="scroll-mt-28 mb-12 sm:mb-16 bg-white border border-stone-200 rounded-card p-5 sm:p-8 lg:p-10 shadow-soft">
           <div className="flex items-center gap-3 mb-3">
             <span className="w-2.5 h-2.5 rounded-full bg-rose" />
             <span className="text-xs font-heading font-bold uppercase tracking-wider text-rose-dark">
@@ -135,7 +135,7 @@ export default function FamilyPathwaysPage() {
               <button
                 key={w}
                 onClick={() => setSelectedWeek(w)}
-                className={`px-4 py-2 rounded-xl text-xs font-heading font-bold transition-all cursor-pointer ${
+                className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl text-xs font-heading font-bold transition-all cursor-pointer ${
                   selectedWeek === w
                     ? 'bg-rose text-white shadow-soft scale-105'
                     : 'bg-stone-100 hover:bg-stone-200/80 text-ink'
@@ -147,8 +147,8 @@ export default function FamilyPathwaysPage() {
           </div>
 
           {/* Interactive Milestone Card */}
-          <div className="bg-rose-light/20 border border-rose-light/70 rounded-2xl p-6 sm:p-8 flex flex-col md:flex-row items-center gap-8">
-            <div className="w-32 h-32 rounded-2xl bg-white p-3 flex items-center justify-center shadow-soft shrink-0">
+          <div className="bg-rose-light/20 border border-rose-light/70 rounded-2xl p-5 sm:p-8 flex flex-col md:flex-row items-center gap-6 sm:gap-8">
+            <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-2xl bg-white p-3 flex items-center justify-center shadow-soft shrink-0">
               <img src={pregnancyStagesSvg} alt={`Week ${selectedWeek}`} className="max-h-full object-contain" />
             </div>
             <div className="flex-1 text-center md:text-left">
@@ -160,7 +160,7 @@ export default function FamilyPathwaysPage() {
                   Trimester {selectedWeek < 13 ? 1 : selectedWeek < 27 ? 2 : 3}
                 </span>
               </div>
-              <h3 className="font-heading font-extrabold text-2xl text-ink mb-1">
+              <h3 className="font-heading font-extrabold text-xl sm:text-2xl text-ink mb-1">
                 Size of a {milestone?.item || 'Cantaloupe'}
               </h3>
               <p className="text-sm font-heading font-bold text-rose-dark mb-3">
@@ -174,7 +174,7 @@ export default function FamilyPathwaysPage() {
         </section>
 
         {/* Section 3: 5-1-1 Active Labor Timing */}
-        <section id="labor-timing" className="scroll-mt-28 mb-16 bg-rose-light/30 border border-rose-light/60 rounded-card p-8 sm:p-10 shadow-soft">
+        <section id="labor-timing" className="scroll-mt-28 mb-12 sm:mb-16 bg-rose-light/30 border border-rose-light/60 rounded-card p-5 sm:p-8 lg:p-10 shadow-soft">
           <div className="flex flex-col lg:flex-row gap-8 items-start justify-between">
             <div className="lg:w-2/3">
               <div className="flex items-center gap-3 mb-3">
@@ -240,7 +240,7 @@ export default function FamilyPathwaysPage() {
         </section>
 
         {/* Section 4: Postpartum Healing Journals */}
-        <section id="postpartum" className="scroll-mt-28 mb-16 bg-peach-light/35 border border-peach-light/60 rounded-card p-8 sm:p-10 shadow-soft">
+        <section id="postpartum" className="scroll-mt-28 mb-12 sm:mb-16 bg-peach-light/35 border border-peach-light/60 rounded-card p-5 sm:p-8 lg:p-10 shadow-soft">
           <div className="flex flex-col lg:flex-row gap-8 items-center justify-between">
             <div className="lg:w-2/3">
               <div className="flex items-center gap-3 mb-3">
@@ -291,7 +291,7 @@ export default function FamilyPathwaysPage() {
         </section>
 
         {/* Section 5: CareCircle Partner Telemetry */}
-        <section id="partner-telemetry" className="scroll-mt-28 mb-16 bg-sage-light/25 border border-sage-light/60 rounded-card p-8 sm:p-10 shadow-soft">
+        <section id="partner-telemetry" className="scroll-mt-28 mb-12 sm:mb-16 bg-sage-light/25 border border-sage-light/60 rounded-card p-5 sm:p-8 lg:p-10 shadow-soft">
           <div className="flex flex-col lg:flex-row gap-8 items-center justify-between">
             <div className="lg:w-2/3">
               <div className="flex items-center gap-3 mb-3">

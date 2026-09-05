@@ -43,42 +43,42 @@ export default function ClinicalFoundationsPage() {
     <div className="min-h-screen bg-white text-ink flex flex-col font-body selection:bg-rose-light">
       <Header />
 
-      <main className="flex-1 max-w-6xl mx-auto px-6 py-12 w-full">
+      <main className="flex-1 max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12 w-full">
         {/* Page Hero Header */}
-        <section className="text-center max-w-3xl mx-auto mb-14">
-          <span className="text-xs font-heading font-bold uppercase tracking-wider text-sage-dark block mb-3">
+        <section className="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
+          <span className="text-xs font-heading font-bold uppercase tracking-wider text-sage-dark block mb-2 sm:mb-3">
             Clinical Documentation & Evidence
           </span>
-          <h1 className="text-4xl sm:text-5xl font-heading font-extrabold text-ink mb-5 leading-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-heading font-extrabold text-ink mb-4 sm:mb-5 leading-tight">
             Clinical Foundations & <span className="text-rose">Care Standards</span>
           </h1>
-          <p className="text-lg text-ink-muted leading-relaxed font-body">
+          <p className="text-sm sm:text-base md:text-lg text-ink-muted leading-relaxed font-body">
             Geva integrates clinical triage guidelines, patient-held SBAR handover briefs, 
             and zero-cost local architecture to bring calming hospital-grade safety to daily perinatal wellness.
           </p>
         </section>
 
         {/* Quick Anchor Navigation Strip */}
-        <nav className="mb-14 p-2 bg-stone-50 rounded-card border border-stone-200/80 flex flex-wrap justify-center gap-2 text-xs font-heading font-bold">
-          <a href="#acog" className="px-4 py-2 rounded-xl bg-white hover:bg-rose-light/40 text-ink shadow-soft transition-all">
+        <nav className="mb-10 sm:mb-14 p-2 bg-stone-50 rounded-card border border-stone-200/80 flex flex-wrap justify-center gap-1.5 sm:gap-2 text-xs font-heading font-bold">
+          <a href="#acog" className="px-3.5 sm:px-4 py-1.5 sm:py-2 rounded-xl bg-white hover:bg-rose-light/40 text-ink shadow-soft transition-all">
             ACOG Triage Protocols
           </a>
-          <a href="#sbar" className="px-4 py-2 rounded-xl bg-white hover:bg-rose-light/40 text-ink shadow-soft transition-all">
+          <a href="#sbar" className="px-3.5 sm:px-4 py-1.5 sm:py-2 rounded-xl bg-white hover:bg-rose-light/40 text-ink shadow-soft transition-all">
             SBAR Doctor Briefs
           </a>
-          <a href="#local-first" className="px-4 py-2 rounded-xl bg-white hover:bg-rose-light/40 text-ink shadow-soft transition-all">
+          <a href="#local-first" className="px-3.5 sm:px-4 py-1.5 sm:py-2 rounded-xl bg-white hover:bg-rose-light/40 text-ink shadow-soft transition-all">
             Local-First Architecture
           </a>
-          <a href="#doppler" className="px-4 py-2 rounded-xl bg-white hover:bg-rose-light/40 text-ink shadow-soft transition-all">
+          <a href="#doppler" className="px-3.5 sm:px-4 py-1.5 sm:py-2 rounded-xl bg-white hover:bg-rose-light/40 text-ink shadow-soft transition-all">
             Doppler Audio Synthesis
           </a>
-          <a href="#sister-midwife" className="px-4 py-2 rounded-xl bg-white hover:bg-rose-light/40 text-ink shadow-soft transition-all">
+          <a href="#sister-midwife" className="px-3.5 sm:px-4 py-1.5 sm:py-2 rounded-xl bg-white hover:bg-rose-light/40 text-ink shadow-soft transition-all">
             Sister-Midwife Philosophy
           </a>
         </nav>
 
         {/* Section 1: ACOG Triage Protocols */}
-        <section id="acog" className="scroll-mt-28 mb-16 bg-sage-light/25 border border-sage-light/60 rounded-card p-8 sm:p-10 shadow-soft">
+        <section id="acog" className="scroll-mt-28 mb-12 sm:mb-16 bg-sage-light/25 border border-sage-light/60 rounded-card p-5 sm:p-8 lg:p-10 shadow-soft">
           <div className="flex flex-col lg:flex-row gap-8 items-start justify-between">
             <div className="lg:w-2/3">
               <div className="flex items-center gap-3 mb-3">
@@ -132,7 +132,7 @@ export default function ClinicalFoundationsPage() {
         </section>
 
         {/* Section 2: SBAR Doctor Briefs */}
-        <section id="sbar" className="scroll-mt-28 mb-16 bg-rose-light/25 border border-rose-light/60 rounded-card p-8 sm:p-10 shadow-soft">
+        <section id="sbar" className="scroll-mt-28 mb-12 sm:mb-16 bg-rose-light/25 border border-rose-light/60 rounded-card p-5 sm:p-8 lg:p-10 shadow-soft">
           <div className="flex flex-col lg:flex-row gap-8 items-start justify-between">
             <div className="lg:w-2/3">
               <div className="flex items-center gap-3 mb-3">
@@ -196,7 +196,7 @@ export default function ClinicalFoundationsPage() {
         </section>
 
         {/* Section 3: Local-First Architecture */}
-        <section id="local-first" className="scroll-mt-28 mb-16 bg-white border border-stone-200 rounded-card p-8 sm:p-10 shadow-soft">
+        <section id="local-first" className="scroll-mt-28 mb-12 sm:mb-16 bg-white border border-stone-200 rounded-card p-5 sm:p-8 lg:p-10 shadow-soft">
           <div className="max-w-3xl">
             <div className="flex items-center gap-3 mb-3">
               <span className="w-2.5 h-2.5 rounded-full bg-ink" />
@@ -240,7 +240,7 @@ export default function ClinicalFoundationsPage() {
         </section>
 
         {/* Section 4: Doppler Audio Synthesis */}
-        <section id="doppler" className="scroll-mt-28 mb-16 bg-periwinkle-light/30 border border-periwinkle-light/60 rounded-card p-8 sm:p-10 shadow-soft">
+        <section id="doppler" className="scroll-mt-28 mb-12 sm:mb-16 bg-periwinkle-light/30 border border-periwinkle-light/60 rounded-card p-5 sm:p-8 lg:p-10 shadow-soft">
           <div className="flex flex-col lg:flex-row gap-8 items-start justify-between">
             <div className="lg:w-2/3">
               <div className="flex items-center gap-3 mb-3">
@@ -295,7 +295,7 @@ export default function ClinicalFoundationsPage() {
         </section>
 
         {/* Section 5: Sister-Midwife Philosophy */}
-        <section id="sister-midwife" className="scroll-mt-28 mb-16 bg-peach-light/35 border border-peach-light/60 rounded-card p-8 sm:p-10 shadow-soft">
+        <section id="sister-midwife" className="scroll-mt-28 mb-12 sm:mb-16 bg-peach-light/35 border border-peach-light/60 rounded-card p-5 sm:p-8 lg:p-10 shadow-soft">
           <div className="flex flex-col lg:flex-row gap-8 items-center justify-between">
             <div className="lg:w-2/3">
               <div className="flex items-center gap-3 mb-3">

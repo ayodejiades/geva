@@ -49,23 +49,23 @@ export const KickCounterModal = ({ isOpen, onClose }) => {
   const pastSessions = state.kicks || [];
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-ink/40 backdrop-blur-sm animate-fade-in">
-      <div className="bg-canvas border border-ink/10 rounded-sheet w-full max-w-lg p-6 sm:p-8 shadow-warm relative max-h-[90vh] overflow-y-auto">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-ink/40 backdrop-blur-sm animate-fade-in">
+      <div className="bg-canvas border border-ink/10 rounded-card sm:rounded-sheet w-full max-w-lg p-5 sm:p-8 shadow-warm relative max-h-[92vh] overflow-y-auto">
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-6 right-6 w-8 h-8 rounded-full bg-ink/5 hover:bg-ink/10 text-ink flex items-center justify-center font-bold text-lg cursor-pointer transition-colors"
+          className="absolute top-5 right-5 sm:top-6 sm:right-6 w-8 h-8 rounded-full bg-ink/5 hover:bg-ink/10 text-ink flex items-center justify-center font-bold text-lg cursor-pointer transition-colors"
           aria-label="Close modal"
         >
           ×
         </button>
 
         {/* Modal Header */}
-        <div className="mb-6">
+        <div className="mb-5 sm:mb-6 pr-8">
           <span className="text-xs font-heading font-bold uppercase tracking-wider text-rose-dark block mb-1">
             ACOG Fetal Movement Protocol
           </span>
-          <h2 className="font-heading font-extrabold text-2xl text-ink">
+          <h2 className="font-heading font-extrabold text-xl sm:text-2xl text-ink">
             Baby Movement Counter
           </h2>
           <p className="font-body text-xs text-ink-muted mt-1 leading-relaxed">
@@ -74,36 +74,36 @@ export const KickCounterModal = ({ isOpen, onClose }) => {
         </div>
 
         {/* Live Active Session Panel */}
-        <div className="bg-canvas/80 border border-ink/10 rounded-2xl p-6 text-center shadow-soft mb-6">
+        <div className="bg-canvas/80 border border-ink/10 rounded-2xl p-4 sm:p-6 text-center shadow-soft mb-6">
           <div className="flex items-center justify-between text-xs text-ink-muted mb-4">
             <span>Session Duration: <strong className="text-ink font-heading">{formatTimer(sessionSeconds)}</strong></span>
             <span>Target: <strong className="text-rose-dark font-heading">10 Kicks</strong></span>
           </div>
 
           {/* Large Tap Target */}
-          <div className="my-4 flex flex-col items-center justify-center">
+          <div className="my-3 sm:my-4 flex flex-col items-center justify-center">
             <button
               onClick={handleTapMovement}
-              className="w-36 h-36 rounded-full bg-rose hover:bg-rose-dark active:scale-95 text-ink shadow-warm border-4 border-canvas flex flex-col items-center justify-center transition-all cursor-pointer select-none"
+              className="w-32 h-32 sm:w-36 sm:h-36 rounded-full bg-rose hover:bg-rose-dark active:scale-95 text-ink shadow-warm border-4 border-canvas flex flex-col items-center justify-center transition-all cursor-pointer select-none"
             >
-              <span className="font-heading font-extrabold text-4xl leading-none">
+              <span className="font-heading font-extrabold text-3xl sm:text-4xl leading-none">
                 {currentCount}
               </span>
               <span className="font-body text-xs uppercase tracking-wider font-bold mt-1 text-ink/80">
                 Tap Movement
               </span>
             </button>
-            <span className="text-[11px] font-body text-ink-muted mt-3">
+            <span className="text-[11px] font-body text-ink-muted mt-2.5 sm:mt-3">
               Tap each time you feel a distinct kick, roll, or flutter
             </span>
           </div>
 
           {/* Session Actions */}
-          <div className="flex items-center justify-center gap-3 mt-4 pt-4 border-t border-ink/5">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-2.5 sm:gap-3 mt-4 pt-4 border-t border-ink/5">
             <button
               onClick={handleFinishSession}
               disabled={currentCount === 0}
-              className="px-5 py-2.5 rounded-xl bg-ink hover:bg-ink/90 disabled:opacity-40 text-canvas font-heading font-bold text-xs transition-all cursor-pointer"
+              className="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-ink hover:bg-ink/90 disabled:opacity-40 text-canvas font-heading font-bold text-xs transition-all cursor-pointer text-center"
             >
               Complete & Save Session
             </button>
@@ -114,7 +114,7 @@ export const KickCounterModal = ({ isOpen, onClose }) => {
                   setSessionSeconds(0);
                   setIsSessionActive(false);
                 }}
-                className="px-4 py-2 rounded-xl border border-ink/15 text-ink-muted hover:text-ink font-body text-xs transition-colors cursor-pointer"
+                className="w-full sm:w-auto px-4 py-2 rounded-xl border border-ink/15 text-ink-muted hover:text-ink font-body text-xs transition-colors cursor-pointer text-center"
               >
                 Reset
               </button>

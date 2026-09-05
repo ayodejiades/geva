@@ -53,9 +53,46 @@ export const ComparisonCharter = () => {
         </p>
       </div>
 
-      {/* Comparison Table Container */}
+      {/* Comparison Container */}
       <div className="bg-white border border-stone-200 rounded-card shadow-soft overflow-hidden">
-        <div className="overflow-x-auto">
+        {/* Mobile View: Stacked Comparison Cards (sm:hidden) */}
+        <div className="block sm:hidden divide-y divide-stone-100">
+          {comparisonRows.map((row, index) => (
+            <div key={index} className="p-4 space-y-3">
+              <span className="font-heading font-bold text-xs uppercase tracking-wider text-ink block">
+                {row.dimension}
+              </span>
+              
+              <div className="p-3 rounded-xl bg-stone-50 border border-stone-100 text-xs font-body">
+                <span className="text-[10px] font-heading font-bold uppercase tracking-wider text-ink-muted block mb-1">
+                  Legacy Platforms (Bump / Flo)
+                </span>
+                <div className="flex items-start gap-2 text-ink-muted">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-ink-faint flex-shrink-0 mt-0.5">
+                    <line x1="18" y1="6" x2="6" y2="18" />
+                    <line x1="6" y1="6" x2="18" y2="18" />
+                  </svg>
+                  <span>{row.legacy}</span>
+                </div>
+              </div>
+
+              <div className="p-3 rounded-xl bg-rose-light/20 border border-rose-light/60 text-xs font-body">
+                <span className="text-[10px] font-heading font-bold uppercase tracking-wider text-rose-dark block mb-1">
+                  Geva Sanctuary
+                </span>
+                <div className="flex items-start gap-2 text-ink font-medium">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="text-sage-dark flex-shrink-0 mt-0.5">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  <span>{row.geva}</span>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Desktop / Tablet View: Table (hidden sm:block) */}
+        <div className="hidden sm:block overflow-x-auto">
           <table className="w-full text-left border-collapse">
             <thead>
               <tr className="border-b border-stone-200 bg-stone-50/70">
@@ -100,25 +137,25 @@ export const ComparisonCharter = () => {
         </div>
 
         {/* Bottom Banner */}
-        <div className="p-6 sm:p-8 bg-stone-50/60 border-t border-stone-200 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="p-5 sm:p-8 bg-stone-50/60 border-t border-stone-200 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4">
           <div>
-            <h4 className="font-heading font-bold text-base text-ink mb-1">
+            <h4 className="font-heading font-bold text-sm sm:text-base text-ink mb-1">
               Read our complete local storage and clinical commitments
             </h4>
             <p className="font-body text-xs text-ink-muted">
               Inspect our open privacy charter and clinical foundations documentation.
             </p>
           </div>
-          <div className="flex items-center gap-3 flex-shrink-0">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-3 flex-shrink-0 w-full sm:w-auto">
             <Link
               to="/privacy-charter"
-              className="py-2.5 px-5 rounded-xl border border-stone-200 text-ink font-heading font-bold text-xs hover:bg-white transition-colors"
+              className="py-2.5 px-5 rounded-xl border border-stone-200 text-ink font-heading font-bold text-xs hover:bg-white transition-colors text-center"
             >
               Privacy Charter
             </Link>
             <Link
               to="/clinical-foundations"
-              className="py-2.5 px-5 rounded-xl bg-rose text-white font-heading font-bold text-xs hover:bg-rose-dark transition-colors shadow-soft"
+              className="py-2.5 px-5 rounded-xl bg-rose text-white font-heading font-bold text-xs hover:bg-rose-dark transition-colors shadow-soft text-center"
             >
               Clinical Foundations
             </Link>

@@ -167,21 +167,21 @@ export const VoiceSanctuary = ({ isOpen, onClose }) => {
   ];
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-canvas/95 backdrop-blur-md animate-fade-in overflow-y-auto">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-canvas/95 backdrop-blur-md animate-fade-in overflow-y-auto">
       {/* Close button */}
       <button
         onClick={onClose}
-        className="fixed top-4 right-4 sm:top-6 sm:right-6 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-ink/5 hover:bg-ink/10 text-ink flex items-center justify-center font-bold text-xl cursor-pointer transition-colors z-10"
+        className="fixed top-3 right-3 sm:top-6 sm:right-6 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-ink/5 hover:bg-ink/10 text-ink flex items-center justify-center font-bold text-lg sm:text-xl cursor-pointer transition-colors z-10"
         aria-label="Close Voice Sanctuary"
       >
         ×
       </button>
 
-      <div className="max-w-xl w-full flex flex-col items-center text-center px-2 sm:px-4 py-8 my-auto">
-        <span className="text-xs font-heading font-bold uppercase tracking-wider text-sage-dark mb-2">
+      <div className="max-w-xl w-full flex flex-col items-center text-center px-2 sm:px-4 py-5 sm:py-8 my-auto">
+        <span className="text-xs font-heading font-bold uppercase tracking-wider text-sage-dark mb-1.5 sm:mb-2">
           Gbemi
         </span>
-        <h2 className="font-heading font-extrabold text-3xl text-ink">
+        <h2 className="font-heading font-extrabold text-2xl sm:text-3xl text-ink">
           Voice Sanctuary
         </h2>
         <p className="font-body text-xs text-ink-muted mt-1 max-w-md">
@@ -222,8 +222,9 @@ export const VoiceSanctuary = ({ isOpen, onClose }) => {
         </div>
 
         {/* Mascot Centerpiece */}
-        <div className="my-8 relative flex items-center justify-center">
-          <GbemiMascot state={mascotState} size={150} />
+        <div className="my-5 sm:my-8 relative flex items-center justify-center">
+          <GbemiMascot state={mascotState} size={110} className="sm:hidden" />
+          <GbemiMascot state={mascotState} size={145} className="hidden sm:inline-flex" />
         </div>
 
         {/* State 1: Active Listening Bar (Live speech in progress) */}

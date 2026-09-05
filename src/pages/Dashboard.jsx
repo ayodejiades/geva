@@ -78,10 +78,10 @@ export const Dashboard = ({ onOpenPassportProp, onOpenVoiceProp }) => {
   const allChecklistDone = hydrationDone && vitaminsDone && movementDone;
 
   return (
-    <main className="max-w-6xl mx-auto px-6 py-6 w-full">
+    <main className="max-w-6xl mx-auto px-4 sm:px-6 py-4 sm:py-6 w-full">
       {/* Real-time Partner Telemetry Banner */}
       {partnerNotification && (
-        <div className="mb-6 bg-sage-light/60 border border-sage/60 text-ink rounded-card p-4 flex items-center justify-between shadow-soft animate-fade-in">
+        <div className="mb-6 bg-sage-light/60 border border-sage/60 text-ink rounded-card p-3.5 sm:p-4 flex items-center justify-between shadow-soft animate-fade-in">
           <div className="flex items-center gap-3">
             <span className="w-2.5 h-2.5 rounded-full bg-sage animate-ping" />
             <div>
@@ -103,7 +103,7 @@ export const Dashboard = ({ onOpenPassportProp, onOpenVoiceProp }) => {
       )}
 
       {/* Welcome Row */}
-      <section className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
+      <section className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 sm:mb-8 gap-4">
         <div>
           {isEditingName ? (
             <form
@@ -123,7 +123,7 @@ export const Dashboard = ({ onOpenPassportProp, onOpenVoiceProp }) => {
                 value={nameInput}
                 onChange={(e) => setNameInput(e.target.value)}
                 placeholder="e.g. Folashade"
-                className="px-3 py-1.5 rounded-xl border border-rose text-base font-heading font-bold text-ink bg-white focus:outline-none shadow-sm"
+                className="px-3 py-1.5 rounded-xl border border-rose text-base font-heading font-bold text-ink bg-white focus:outline-none shadow-sm max-w-[200px] xs:max-w-none"
                 autoFocus
               />
               <button
@@ -141,8 +141,8 @@ export const Dashboard = ({ onOpenPassportProp, onOpenVoiceProp }) => {
               </button>
             </form>
           ) : (
-            <div className="flex items-center gap-2.5 mb-1 flex-wrap">
-              <h1 className="text-3xl font-heading font-bold text-ink">
+            <div className="flex items-center gap-2 mb-1 flex-wrap">
+              <h1 className="text-2xl sm:text-3xl font-heading font-bold text-ink">
                 {firstName ? `Welcome back, ${firstName}!` : 'Welcome back!'}
               </h1>
               <button
@@ -158,17 +158,17 @@ export const Dashboard = ({ onOpenPassportProp, onOpenVoiceProp }) => {
               </button>
             </div>
           )}
-          <p className="text-lg text-ink-muted font-body">
+          <p className="text-sm sm:text-base md:text-lg text-ink-muted font-body">
             It's a great day to carry greatness.
           </p>
         </div>
 
         {/* Expected Delivery Date Countdown Badge */}
-        <div className="w-full md:w-auto bg-gradient-to-r from-rose-light/40 to-peach-light/40 rounded-card p-4 border border-rose-light/40 text-center">
-          <span className="text-xs font-heading font-bold uppercase tracking-wider text-ink-muted block">
+        <div className="w-full md:w-auto bg-gradient-to-r from-rose-light/40 to-peach-light/40 rounded-card p-3.5 sm:p-4 border border-rose-light/40 text-left sm:text-center">
+          <span className="text-[11px] sm:text-xs font-heading font-bold uppercase tracking-wider text-ink-muted block">
             {stage === 'ttc' ? 'Target Fertile Window' : stage === 'postpartum' ? 'Recovery Phase' : 'Estimated Delivery'}
           </span>
-          <span className="font-heading font-extrabold text-xl text-ink block mt-0.5">
+          <span className="font-heading font-extrabold text-lg sm:text-xl text-ink block mt-0.5">
             {stage === 'ttc'
               ? 'Peak Ovulation Window'
               : stage === 'postpartum'
@@ -331,21 +331,21 @@ export const Dashboard = ({ onOpenPassportProp, onOpenVoiceProp }) => {
                 <span className="font-heading font-semibold text-ink">Hydration (8 Glasses)</span>
                 <span className="text-rose-dark font-bold">{waterGlasses}/8</span>
               </div>
-              <div className="grid grid-cols-8 gap-1.5">
+              <div className="grid grid-cols-8 gap-1 xs:gap-1.5">
                 {Array.from({ length: 8 }, (_, i) => {
                   const filled = i < waterGlasses;
                   return (
                     <button
                       key={i}
                       onClick={() => setWaterGlasses(waterGlasses === i + 1 ? i : i + 1)}
-                      className={`aspect-square rounded-lg border flex items-center justify-center transition-all cursor-pointer p-1 sm:p-1.5 ${
+                      className={`aspect-square min-w-0 rounded-lg border flex items-center justify-center transition-all cursor-pointer p-0.5 xs:p-1 sm:p-1.5 ${
                         filled
                           ? 'bg-sage border-sage-dark text-white shadow-sm'
                           : 'bg-white border-stone-200 text-stone-300 hover:border-sage'
                       }`}
                       title={`Glass ${i + 1}`}
                     >
-                      <svg className="w-3 h-3 sm:w-3.5 sm:h-3.5" viewBox="0 0 24 24" fill={filled ? 'currentColor' : 'none'} stroke="currentColor" strokeWidth="2">
+                      <svg className="w-2.5 h-2.5 xs:w-3 xs:h-3 sm:w-3.5 sm:h-3.5" viewBox="0 0 24 24" fill={filled ? 'currentColor' : 'none'} stroke="currentColor" strokeWidth="2">
                         <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z" />
                       </svg>
                     </button>
@@ -541,14 +541,15 @@ export const Dashboard = ({ onOpenPassportProp, onOpenVoiceProp }) => {
       </section>
 
       {/* Floating Voice Companion Button */}
-      <div className="fixed bottom-6 right-6 z-50 no-print">
+      <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 no-print">
         <button
           onClick={handleOpenVoice}
-          className="w-16 h-16 rounded-full bg-white shadow-soft hover:shadow-warm transition-all hover:scale-105 cursor-pointer flex items-center justify-center border border-stone-200"
+          className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white shadow-soft hover:shadow-warm transition-all hover:scale-105 cursor-pointer flex items-center justify-center border border-stone-200"
           title="Speak with Gbemi"
           aria-label="Open Gbemi Voice Sanctuary"
         >
-          <GbemiMascot size={56} state="idle" />
+          <GbemiMascot size={46} className="sm:hidden" state="idle" />
+          <GbemiMascot size={56} className="hidden sm:inline-flex" state="idle" />
         </button>
       </div>
 

@@ -41,9 +41,11 @@ export const ClinicalPassportModal = ({ isOpen, onClose }) => {
     const rect = canvas.getBoundingClientRect();
     const clientX = e.touches ? e.touches[0].clientX : e.clientX;
     const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+    const scaleX = canvas.width / rect.width;
+    const scaleY = canvas.height / rect.height;
     isDrawingRef.current = true;
     ctx.beginPath();
-    ctx.moveTo(clientX - rect.left, clientY - rect.top);
+    ctx.moveTo((clientX - rect.left) * scaleX, (clientY - rect.top) * scaleY);
   };
 
   const draw = (e) => {
@@ -55,11 +57,13 @@ export const ClinicalPassportModal = ({ isOpen, onClose }) => {
     const rect = canvas.getBoundingClientRect();
     const clientX = e.touches ? e.touches[0].clientX : e.clientX;
     const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+    const scaleX = canvas.width / rect.width;
+    const scaleY = canvas.height / rect.height;
     ctx.lineWidth = 2.5;
     ctx.lineCap = 'round';
     ctx.lineJoin = 'round';
     ctx.strokeStyle = '#2D2424';
-    ctx.lineTo(clientX - rect.left, clientY - rect.top);
+    ctx.lineTo((clientX - rect.left) * scaleX, (clientY - rect.top) * scaleY);
     ctx.stroke();
   };
 
@@ -87,16 +91,16 @@ export const ClinicalPassportModal = ({ isOpen, onClose }) => {
   return (
     <div 
       onClick={(e) => { if (e.target === e.currentTarget) onClose(); }}
-      className="fixed inset-0 z-50 overflow-y-auto bg-ink/40 backdrop-blur-sm p-4 sm:p-6 flex justify-center items-start animate-fade-in"
+      className="fixed inset-0 z-50 overflow-y-auto bg-ink/40 backdrop-blur-sm p-3 sm:p-6 flex justify-center items-start animate-fade-in"
     >
-      <div className="bg-canvas border border-ink/10 rounded-sheet w-full max-w-3xl p-6 sm:p-10 shadow-warm relative my-6 sm:my-10 passport-container">
+      <div className="bg-canvas border border-ink/10 rounded-card sm:rounded-sheet w-full max-w-3xl p-4 sm:p-8 lg:p-10 shadow-warm relative my-4 sm:my-10 passport-container">
         {/* Actions bar (hidden during print) */}
-        <div className="no-print flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-4 mb-6 sm:mb-8 pb-4 border-b border-ink/10">
+        <div className="no-print flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-4 mb-5 sm:mb-8 pb-4 border-b border-ink/10">
           <div>
             <span className="text-xs font-heading font-bold uppercase tracking-wider text-rose-dark block">
               Maternal Health Record Export
             </span>
-            <h2 className="font-heading font-extrabold text-xl sm:text-2xl text-ink">
+            <h2 className="font-heading font-extrabold text-lg sm:text-2xl text-ink">
               Clinical Visit Passport (SBAR Brief)
             </h2>
           </div>
@@ -299,11 +303,11 @@ export const ClinicalPassportModal = ({ isOpen, onClose }) => {
               </div>
 
               {/* Mode switch for verification, signature pad, or blank paper pen */}
-              <div className="no-print inline-flex items-center gap-1.5 p-1 rounded-xl bg-stone-100 border border-stone-200 text-xs font-heading font-semibold">
+              <div className="no-print flex flex-wrap sm:inline-flex items-center gap-1.5 p-1 rounded-xl bg-stone-100 border border-stone-200 text-xs font-heading font-semibold w-full sm:w-auto">
                 <button
                   type="button"
                   onClick={() => setSignatureMode('verified')}
-                  className={`px-3 py-1.5 rounded-lg transition-all cursor-pointer ${
+                  className={`flex-1 sm:flex-initial px-2.5 sm:px-3 py-1.5 rounded-lg transition-all cursor-pointer text-center ${
                     signatureMode === 'verified'
                       ? 'bg-white text-ink shadow-soft font-bold'
                       : 'text-ink-muted hover:text-ink'
@@ -314,7 +318,7 @@ export const ClinicalPassportModal = ({ isOpen, onClose }) => {
                 <button
                   type="button"
                   onClick={() => setSignatureMode('draw')}
-                  className={`px-3 py-1.5 rounded-lg transition-all cursor-pointer ${
+                  className={`flex-1 sm:flex-initial px-2.5 sm:px-3 py-1.5 rounded-lg transition-all cursor-pointer text-center ${
                     signatureMode === 'draw'
                       ? 'bg-white text-ink shadow-soft font-bold'
                       : 'text-ink-muted hover:text-ink'
@@ -325,7 +329,7 @@ export const ClinicalPassportModal = ({ isOpen, onClose }) => {
                 <button
                   type="button"
                   onClick={() => setSignatureMode('blank')}
-                  className={`px-3 py-1.5 rounded-lg transition-all cursor-pointer ${
+                  className={`flex-1 sm:flex-initial px-2.5 sm:px-3 py-1.5 rounded-lg transition-all cursor-pointer text-center ${
                     signatureMode === 'blank'
                       ? 'bg-white text-ink shadow-soft font-bold'
                       : 'text-ink-muted hover:text-ink'

@@ -28,8 +28,8 @@ export const StageSelector = () => {
       </header>
 
       {/* Main Container */}
-      <main className="flex flex-col items-center justify-center max-w-xl mx-auto px-4 py-8 w-full">
-        <h1 className="text-3xl md:text-4xl font-heading font-bold text-ink mb-8 text-center">
+      <main className="flex flex-col items-center justify-center max-w-xl mx-auto px-4 py-6 sm:py-8 w-full">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-heading font-bold text-ink mb-6 sm:mb-8 text-center">
           Where are you on your <span className="text-rose">journey</span>?
         </h1>
 
@@ -38,15 +38,15 @@ export const StageSelector = () => {
           {/* Card 1: Conception */}
           <div
             onClick={() => handleSelectStage('ttc')}
-            className="bg-periwinkle-light/35 rounded-card p-4 sm:p-6 flex items-center space-x-4 sm:space-x-6 cursor-pointer border border-periwinkle-light/60 hover:bg-periwinkle-light/50 transition-all hover:-translate-y-1 hover:shadow-soft"
+            className="bg-periwinkle-light/35 rounded-card p-4 sm:p-6 flex items-center space-x-3 sm:space-x-6 cursor-pointer border border-periwinkle-light/60 hover:bg-periwinkle-light/50 transition-all hover:-translate-y-1 hover:shadow-soft"
           >
             <img
               src={conceptionSvg}
               alt="Conception & Family Planning"
-              className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 object-contain flex-shrink-0 drop-shadow-sm"
+              className="w-14 h-14 sm:w-20 sm:h-20 md:w-24 md:h-24 object-contain flex-shrink-0 drop-shadow-sm"
             />
             <div className="text-left">
-              <h2 className="font-heading font-bold text-lg sm:text-xl text-ink mb-1">
+              <h2 className="font-heading font-bold text-base sm:text-xl text-ink mb-1">
                 Conception & Family Planning
               </h2>
               <p className="font-body text-ink-muted text-xs sm:text-sm leading-relaxed">
@@ -58,12 +58,12 @@ export const StageSelector = () => {
           {/* Card 2: Pregnancy */}
           <div
             onClick={() => handleSelectStage('pregnancy')}
-            className="bg-rose-light/30 rounded-card p-4 sm:p-6 flex items-center space-x-4 sm:space-x-6 cursor-pointer border border-rose-light/60 hover:bg-rose-light/50 transition-all hover:-translate-y-1 hover:shadow-soft"
+            className="bg-rose-light/30 rounded-card p-4 sm:p-6 flex items-center space-x-3 sm:space-x-6 cursor-pointer border border-rose-light/60 hover:bg-rose-light/50 transition-all hover:-translate-y-1 hover:shadow-soft"
           >
             <img
               src={pregnancyStagesSvg}
               alt="Pregnancy & Gestational Care"
-              className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 object-contain flex-shrink-0 drop-shadow-sm"
+              className="w-14 h-14 sm:w-20 sm:h-20 md:w-24 md:h-24 object-contain flex-shrink-0 drop-shadow-sm"
             />
             <div className="text-left">
               <h2 className="font-heading font-bold text-lg sm:text-xl text-ink mb-1">
@@ -78,15 +78,15 @@ export const StageSelector = () => {
           {/* Card 3: Postpartum */}
           <div
             onClick={() => handleSelectStage('postpartum')}
-            className="bg-peach-light/40 rounded-card p-4 sm:p-6 flex items-center space-x-4 sm:space-x-6 cursor-pointer border border-peach-light/60 hover:bg-peach-light/60 transition-all hover:-translate-y-1 hover:shadow-soft"
+            className="bg-peach-light/40 rounded-card p-4 sm:p-6 flex items-center space-x-3 sm:space-x-6 cursor-pointer border border-peach-light/60 hover:bg-peach-light/60 transition-all hover:-translate-y-1 hover:shadow-soft"
           >
             <img
               src={motherhoodSvg}
               alt="Postpartum & Fourth Trimester"
-              className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 object-contain flex-shrink-0 drop-shadow-sm"
+              className="w-14 h-14 sm:w-20 sm:h-20 md:w-24 md:h-24 object-contain flex-shrink-0 drop-shadow-sm"
             />
             <div className="text-left">
-              <h2 className="font-heading font-bold text-lg sm:text-xl text-ink mb-1">
+              <h2 className="font-heading font-bold text-base sm:text-xl text-ink mb-1">
                 Postpartum & Fourth Trimester
               </h2>
               <p className="font-body text-ink-muted text-xs sm:text-sm leading-relaxed">
