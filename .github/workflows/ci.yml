@@ -1,0 +1,32 @@
+name: Geva Production Gate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test-and-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Anti-Emoji & Anti-Slop Compliance Check
+        run: npm run compliance
+
+      - name: TypeScript Type Check
+        run: npx tsc --noEmit
+
+      - name: Automated Unit & Integration Tests
+        run: npm run test
+
+      - name: Production Build
+        run: npm run build

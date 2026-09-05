@@ -1,0 +1,24 @@
+graph LR
+    subgraph MomTab["Mom's Browser Window"]
+        M_Kick["Kick Counter"]
+        M_Contraction["Contraction Timer"]
+        M_Vitals["Hydration & Vitals"]
+    end
+
+    subgraph BrowserBus["Browser Local Channel"]
+        BC["BroadcastChannel: 'geva_care_circle'"]
+    end
+
+    subgraph PartnerTab["Partner's Browser Window"]
+        P_Pulse["Live Kick Animation"]
+        P_Wave["Contraction Wave Monitor"]
+        P_Alert["5-1-1 Hospital Readiness Alert"]
+    end
+
+    M_Kick -->|Instant Kick Pulse| BC
+    M_Contraction -->|Surge Start & Duration| BC
+    M_Vitals -->|Water & Wellness Check| BC
+
+    BC -->|Sub-10ms Local Relay| P_Pulse
+    BC -->|Real-Time Wave Update| P_Wave
+    BC -->|Active Labor Trigger| P_Alert

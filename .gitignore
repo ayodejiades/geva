@@ -1,0 +1,35 @@
+# Ignore everything by default
+/*
+
+# Whitelist .gitignore and README
+!.gitignore
+!README.md
+!RELEASE-NOTES.md
+!/diagrams/
+
+# Whitelist essential root project & build configurations
+!package.json
+!package-lock.json
+!index.html
+!vite.config.js
+!vitest.config.ts
+!tailwind.config.js
+!postcss.config.js
+!tsconfig.json
+!vercel.json
+
+# Whitelist needed directories
+!/src/
+!/public/
+!/scripts/
+!/.github/
+
+# Re-ignore OS, build, and environment artifacts within whitelisted directories
+**/.DS_Store
+**/*.log
+node_modules/
+dist/
+dist-ssr/
+.env
+.env.local
+.env.*.local

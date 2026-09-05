@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="100%" height="100%" fill="none">
+  <defs>
+    <linearGradient id="syncWash" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E4ECF7"/>
+      <stop offset="100%" stop-color="#F4F8FD"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Grounded Rounded Tile -->
+  <rect width="64" height="64" rx="16" fill="url(#syncWash)"/>
+  <rect x="0.5" y="0.5" width="63" height="63" rx="15.5" stroke="#9FB1D0" stroke-opacity="0.3"/>
+
+  <!-- Peer-to-Peer Telemetry Broadcast Wave -->
+  <path d="M23 20 C28 17 34 17 39 20" stroke="#DC9F6E" stroke-width="2" stroke-linecap="round"/>
+  <path d="M25 46 C30 49 36 49 41 46" stroke="#7C92B8" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Mother Browser Runtime Tile -->
+  <g transform="translate(10, 16)">
+    <rect width="22" height="26" rx="4" fill="#FFFFFF" stroke="#9FB1D0" stroke-width="1.5"/>
+    <path d="M0 4 C0 1.8 1.8 0 4 0 H18 C20.2 0 22 1.8 22 4 V7 H0 Z" fill="#E4ECF7"/>
+    <circle cx="4" cy="3.5" r="1" fill="#7C92B8"/>
+    <circle cx="7" cy="3.5" r="1" fill="#7C92B8"/>
+    <line x1="4" y1="12" x2="16" y2="12" stroke="#9FB1D0" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="4" y1="17" x2="12" y2="17" stroke="#9FB1D0" stroke-width="1.5" stroke-linecap="round"/>
+    <circle cx="16" cy="20" r="1.5" fill="#9CAF88"/>
+  </g>
+
+  <!-- Partner Browser Runtime Tile (Offset Sync) -->
+  <g transform="translate(32, 22)">
+    <rect width="22" height="26" rx="4" fill="#FFFFFF" stroke="#7C92B8" stroke-width="1.5"/>
+    <path d="M0 4 C0 1.8 1.8 0 4 0 H18 C20.2 0 22 1.8 22 4 V7 H0 Z" fill="#E4ECF7"/>
+    <circle cx="4" cy="3.5" r="1" fill="#7C92B8"/>
+    <circle cx="7" cy="3.5" r="1" fill="#7C92B8"/>
+    <line x1="4" y1="12" x2="16" y2="12" stroke="#7C92B8" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="4" y1="17" x2="14" y2="17" stroke="#7C92B8" stroke-width="1.5" stroke-linecap="round"/>
+    <circle cx="16" cy="20" r="1.5" fill="#DC9F6E"/>
+  </g>
+
+  <!-- Central Sacred Local Custody Shield (Zero Server / Private Runtime) -->
+  <g transform="translate(25, 9)">
+    <path d="M7 0 L14 3.5 V8.5 C14 13.5 11 16.5 7 18 C3 16.5 0 13.5 0 8.5 V3.5 Z" fill="#9CAF88"/>
+    <path d="M4 8.5 L6 10.5 L10 5.5" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

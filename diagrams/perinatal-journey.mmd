@@ -1,0 +1,32 @@
+graph TD
+    User["Expecting Parent or Couple"] --> StageChoice{"Choose Life Stage"}
+
+    subgraph Stage1["1. Conception & Family Planning"]
+        TTC1["Cycle Day & Ovulation Tracking"]
+        TTC2["LH Surge Prediction"]
+        TTC3["Basal Body Temperature"]
+    end
+
+    subgraph Stage2["2. Pregnancy & Labor Monitoring"]
+        P1["Weekly Fetal Milestones"]
+        P2["Synthetic Doppler Audio (145 BPM)"]
+        P3["Kick Counter Session"]
+        P4["5-1-1 Active Labor Rhythm Timer"]
+    end
+
+    subgraph Stage3["3. Postpartum Recovery"]
+        PP1["Newborn Feed & Sleep Windows"]
+        PP2["Pelvic Floor Healing Milestones"]
+        PP3["Edinburgh Mood Screening"]
+    end
+
+    StageChoice --> Stage1
+    StageChoice --> Stage2
+    StageChoice --> Stage3
+
+    Stage1 --> CareCompanion["Gbemi Sister-Midwife Voice Companion"]
+    Stage2 --> CareCompanion
+    Stage3 --> CareCompanion
+
+    Stage2 --> SyncBus["CareCircle Real-Time Partner Sync"]
+    Stage2 --> SbarDoc["Printable SBAR Doctor Visit Passport"]

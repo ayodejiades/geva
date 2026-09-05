@@ -1,0 +1,12 @@
+graph TD
+    StartSurge["Contraction Surge Begins"] --> Timer["Timer Records Duration & Interval"]
+    Timer --> CheckRule{"Evaluate ACOG 5-1-1 Rule"}
+
+    CheckRule -->|"Interval > 5 min OR Duration < 50s"| BraxtonHicks["Irregular Braxton Hicks Contractions"]
+    BraxtonHicks --> RestGuidance["Hydrate, Change Position, Rest"]
+    RestGuidance --> Timer
+
+    CheckRule -->|"5 min apart • 60s long • Lasting 1+ hour"| ActiveLabor["Active Labor Progression Confirmed"]
+    ActiveLabor --> NotifyPartner["Alert Partner via CareCircle Sync"]
+    ActiveLabor --> GeneratePassport["Generate Printable SBAR Doctor Brief"]
+    GeneratePassport --> Hospital["Contact Midwife & Proceed to Hospital"]
