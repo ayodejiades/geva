@@ -77,7 +77,7 @@ export default function PrivacyCharterPage() {
               </h2>
               <p className="text-ink-muted leading-relaxed font-body mb-6">
                 In an era where reproductive healthcare apps sell location logs and cycle telemetry to commercial 
-                brokers or face legal subpoenas, Geva guarantees that **zero medical telemetry is transmitted across the internet**.
+                brokers or face legal subpoenas, Geva guarantees that zero medical telemetry is transmitted across the internet.
               </p>
 
               <div className="space-y-3 text-xs font-body">
@@ -129,7 +129,7 @@ export default function PrivacyCharterPage() {
             </h2>
             <p className="text-ink-muted leading-relaxed font-body mb-4">
               Geva is developed as an educational perinatal health companion, midwife-inspired guide, 
-              and structured telemetry organizer. It is **not a diagnostic medical device** and is designed to complement, 
+              and structured telemetry organizer. It is not a diagnostic medical device and is designed to complement, 
               never replace, the direct clinical judgment of your obstetrician, certified nurse-midwife, or maternal-fetal medicine specialist.
             </p>
             <div className="p-4 bg-white/90 rounded-xl border border-sage/40 text-xs font-body text-ink space-y-2">

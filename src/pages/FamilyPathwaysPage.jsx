@@ -188,7 +188,7 @@ export default function FamilyPathwaysPage() {
               </h2>
               <p className="text-ink-muted leading-relaxed font-body mb-6">
                 Knowing when to transition from home to hospital or birth center prevents premature triage visits 
-                while safeguarding maternal health. Midwives and obstetricians universally utilize the **5-1-1 rule** 
+                while safeguarding maternal health. Midwives and obstetricians universally utilize the 5-1-1 rule 
                 as the threshold for active labor progress.
               </p>
 
@@ -253,7 +253,7 @@ export default function FamilyPathwaysPage() {
                 Postpartum Recovery & <span className="text-rose">Maternal Healing</span>
               </h2>
               <p className="text-ink-muted leading-relaxed font-body mb-6">
-                Most pregnancy tools vanish the moment delivery concludes. Geva honors the **Fourth Trimester**, 
+                Most pregnancy tools vanish the moment delivery concludes. Geva honors the Fourth Trimester, 
                 recognizing that uterine involution, lochia monitoring, pelvic floor rest, and emotional stabilization 
                 are vital medical milestones requiring tender, persistent support.
               </p>
@@ -305,7 +305,7 @@ export default function FamilyPathwaysPage() {
               </h2>
               <p className="text-ink-muted leading-relaxed font-body mb-6">
                 Partners often feel sidelined during pregnancy or anxious about when labor begins. 
-                Geva's **CareCircle** operates client-side via the native browser **`BroadcastChannel` API**, 
+                Geva's CareCircle operates client-side via the native browser `BroadcastChannel` API, 
                 synchronizing kick counter taps and contraction timers between mom and partner in real-time across open windows, with zero server cost.
               </p>
 

@@ -92,7 +92,7 @@ export default function ClinicalFoundationsPage() {
               </h2>
               <p className="text-ink-muted leading-relaxed font-body mb-6">
                 Maternal health safety relies on prompt identification of emergent complications such as 
-                preeclampsia, placental abruption, and reduced fetal movement. Geva’s clinical engine evaluates 
+                preeclampsia, placental abruption, and reduced fetal movement. Geva's clinical engine evaluates 
                 daily logs against established American College of Obstetricians and Gynecologists (ACOG) guidelines.
               </p>
 
@@ -146,7 +146,7 @@ export default function ClinicalFoundationsPage() {
               </h2>
               <p className="text-ink-muted leading-relaxed font-body mb-6">
                 When patients visit prenatal appointments, clinical teams often have less than 15 minutes. 
-                Geva structures 14 days of patient data into the standardized hospital **SBAR format** 
+                Geva structures 14 days of patient data into the standardized hospital SBAR format
                 (Situation, Background, Assessment, Recommendation), creating an immediate one-page summary 
                 that doctors and midwives can read in 60 seconds.
               </p>
@@ -255,7 +255,7 @@ export default function ClinicalFoundationsPage() {
               <p className="text-ink-muted leading-relaxed font-body mb-6">
                 Hearing the baby's heartbeat provides immense psychological reassurance to expectant parents. 
                 Instead of streaming external MP3 recordings that consume bandwidth or fail offline, Geva's 
-                audio engine synthesizes realistic acoustic ultrasound fluid Doppler sounds in real-time via the browser's native **Web Audio API**.
+                audio engine synthesizes realistic acoustic ultrasound fluid Doppler sounds in real-time via the browser's native Web Audio API.
               </p>
 
               <div className="grid sm:grid-cols-3 gap-3 text-xs font-body">
@@ -308,7 +308,7 @@ export default function ClinicalFoundationsPage() {
                 The Sister-Midwife <span className="text-rose">Philosophy</span>
               </h2>
               <p className="text-ink-muted leading-relaxed font-body mb-4">
-                In many West African traditions, the name **Gbemi** carries the sacred meaning *"lift me up"* or *"carry me"*. 
+                In many West African traditions, the name "Gbemi" carries the sacred meaning "lift me up". 
                 Historically, women never birthed alone; they were surrounded by seasoned sisters, aunties, and traditional midwives 
                 who offered physical comfort, continuous presence, and emotional calm without condescension.
               </p>
