@@ -9,7 +9,8 @@
     "preview": "vite preview",
     "test": "vitest run",
     "test:watch": "vitest",
-    "compliance": "node scripts/verify-compliance.cjs"
+    "compliance": "node scripts/verify-compliance.cjs",
+    "og:generate": "python3 scripts/generate-og-image.py"
   },
   "dependencies": {
     "@mlc-ai/web-llm": "^0.2.84",
