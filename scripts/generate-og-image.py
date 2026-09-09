@@ -44,53 +44,31 @@ html_split = f"""<!DOCTYPE html>
       position: relative;
     }}
     .left-col {{
-      width: 580px;
+      width: 590px;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
       z-index: 2;
     }}
-    .eyebrow {{
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(221, 165, 159, 0.18);
-      border: 1px solid rgba(221, 165, 159, 0.45);
-      border-radius: 9999px;
-      padding: 6px 16px;
-      font-family: 'Nunito', sans-serif;
-      font-size: 13px;
-      font-weight: 800;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: #C88B85;
-      margin-bottom: 20px;
-    }}
-    .eyebrow-dot {{
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: #9CAF88;
-    }}
     .brand-title {{
       font-family: 'Nunito', sans-serif;
-      font-size: 82px;
+      font-size: 88px;
       font-weight: 900;
       letter-spacing: -0.04em;
       color: #2D2424;
       line-height: 1;
-      margin-bottom: 16px;
+      margin-bottom: 20px;
     }}
     .brand-title span {{
       color: #DDA59F;
     }}
     .tagline {{
       font-family: 'Quicksand', sans-serif;
-      font-size: 26px;
+      font-size: 28px;
       font-weight: 700;
       color: #2D2424;
       line-height: 1.35;
-      margin-bottom: 20px;
+      margin-bottom: 24px;
       letter-spacing: -0.01em;
     }}
     .tagline .highlight {{
@@ -99,8 +77,8 @@ html_split = f"""<!DOCTYPE html>
     .feature-list {{
       display: flex;
       flex-direction: column;
-      gap: 8px;
-      margin-bottom: 28px;
+      gap: 10px;
+      margin-bottom: 32px;
     }}
     .feature-item {{
       display: flex;
@@ -170,10 +148,6 @@ html_split = f"""<!DOCTYPE html>
 </head>
 <body>
   <div class="left-col">
-    <div class="eyebrow">
-      <div class="eyebrow-dot"></div>
-      <span>Maternal & Perinatal Sanctuary</span>
-    </div>
     <h1 class="brand-title">ge<span>va</span></h1>
     <p class="tagline">Every heartbeat. Every milestone.<br><span class="highlight">Nurtured together.</span></p>
     <div class="feature-list">
