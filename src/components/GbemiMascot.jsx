@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useId } from 'react';
 
 export const GbemiMascot = ({ state = 'idle', size = 120, className = '' }) => {
+  const clipId = useId();
+
   return (
     <div 
       className={`relative inline-flex items-center justify-center select-none ${className}`}
       style={{ width: size, height: size }}
+      role="img"
       aria-label={`Gbemi companion in ${state} state`}
     >
       {/* Listening Soft Sage Pulse Ring */}
@@ -43,20 +46,20 @@ export const GbemiMascot = ({ state = 'idle', size = 120, className = '' }) => {
       {state === 'celebrating' && (
         <div className="absolute -top-4 inset-x-0 flex justify-around pointer-events-none z-10">
           <div className="w-2.5 h-2.5 rounded-full bg-rose animate-bounce" style={{ animationDelay: '0ms' }} />
-          <div className="w-2 h-2 rounded-full bg-peach animate-bounce" style={{ animationDelay: '150ms' }} />
+          <div className="w-2.5 h-2.5 rounded-full bg-peach animate-bounce" style={{ animationDelay: '150ms' }} />
           <div className="w-2.5 h-2.5 rounded-full bg-sage animate-bounce" style={{ animationDelay: '300ms' }} />
         </div>
       )}
 
       <div 
         className={`w-full h-full rounded-full transition-transform duration-300 ${
-          state === 'idle' ? 'animate-pulse' : 
+          state === 'idle' ? 'animate-breathe' : 
           state === 'listening' ? 'rotate-3 scale-105' : 
-          (state === 'thinking' || state === 'reflecting') ? '-rotate-1 scale-102 animate-pulse' :
+          (state === 'thinking' || state === 'reflecting') ? '-rotate-1 scale-[1.02] animate-pulse' :
           state === 'speaking' ? 'scale-105' : 
           state === 'celebrating' ? '-translate-y-2 scale-110' : ''
         }`}
-        style={{ animationDuration: state === 'thinking' || state === 'reflecting' ? '2s' : '3.5s' }}
+        style={{ animationDuration: state === 'thinking' || state === 'reflecting' ? '2s' : '4s' }}
       >
         <svg 
           viewBox="77 182 90 90" 
@@ -67,13 +70,13 @@ export const GbemiMascot = ({ state = 'idle', size = 120, className = '' }) => {
           className="w-full h-full drop-shadow-sm"
         >
           <defs>
-            <clipPath id="gbemiAfroClip">
+            <clipPath id={clipId}>
               <circle cx="122" cy="227" r="44" />
             </clipPath>
           </defs>
           {/* Halo Backdrop (Soft Sage Light) */}
           <circle cx="122" cy="227" r="44" fill="#E5ECE0" />
-          <g clipPath="url(#gbemiAfroClip)">
+          <g clipPath={`url(#${clipId})`}>
             {/* Base Top / Attire (Warm Rose) */}
             <path d="M89,312,83.3,283.18c5.91-7.31,29.86-12,29.86-12,.2,10.87,19.73,11.92,17.05,3.08a147.25,147.25,0,0,1,14,4.76c7.24,3.1,11.1,5.42,12.51,9.72,0,0,2.29,9.45-1.27,28.19-1,5.15-4.62,32.47-4,41.53l11.59,14.09c-5.73,4.77-15.87,11.77-23.67,10.47-30.14-5-48.2-8.45-48.2-8.45.61-5.53,3.91-14.17,4.91-18.28,0-5.36-1.16-9-2.58-18.51C93.31,335.94,89.62,313.81,89,312Z" fill="#DDA59F" />
             

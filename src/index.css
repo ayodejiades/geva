@@ -10,6 +10,19 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+@keyframes breathe {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.025);
+  }
+}
+
+.animate-breathe {
+  animation: breathe 4s ease-in-out infinite;
+}
+
 /* Clinical Passport @media print styles */
 @media print {
   body {
