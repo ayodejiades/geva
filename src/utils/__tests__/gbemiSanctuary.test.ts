@@ -1,8 +1,7 @@
 import { describe, it, expect, vi } from 'vitest';
-import {
-  getClinicalMidwifeGuidance,
-  getPromptSuggestions,
-} from '../../components/VoiceSanctuary';
+// @ts-ignore - VoiceSanctuary is a JSX component module
+import { getClinicalMidwifeGuidance, getPromptSuggestions } from '../../components/VoiceSanctuary';
+// @ts-ignore - speechEngine is a JavaScript module
 import { speechEngine } from '../speechEngine';
 
 describe('Gbemi Midwife Clinical Intelligence & Safety Triage', () => {
